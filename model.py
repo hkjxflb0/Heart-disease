@@ -1,21 +1,25 @@
 # models.py
 from pydantic import BaseModel
 from typing import Optional
+from pydantic import BaseModel
+from typing import Optional
 
-class HeartDiseaseInput(BaseModel):
+class PredictionData(BaseModel):
     age: int
-    sex: int
-    chest_pain_type: int
+    sex: str
+    chest_pain_type: str
     resting_blood_pressure: int
     cholestoral: int
-    fasting_blood_sugar: int
-    rest_ecg: int
+    fasting_blood_sugar: str
+    rest_ecg: str
     max_heart_rate: int
-    exercise_induced_angina: int
+    exercise_induced_angina: str
     oldpeak: float
-    slope: int
-    vessels_colored_by_flourosopy: int
-    thalassemia: int
+    slope: str
+    vessels_colored_by_fluoroscopy: str
+    thalassemia: str
+    prediction: str
+
 
 class HeartDiseasePrediction(BaseModel):
     prediction: str
